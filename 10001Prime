@@ -1,0 +1,36 @@
+import Darwin
+
+class PrimeNum{
+    func isThousandPrime(_ num: Int) -> Bool {
+        var countNumOne = 1
+        let number = num
+        let sqrts = Int(sqrt(Double(number)))
+        var indexOne = 1
+        while indexOne <= sqrts{
+            if number % indexOne == 0{
+                countNumOne += 1
+            }
+            if countNumOne > 1{
+                return false
+            }
+            indexOne += 1
+        }
+        return true
+    }
+    func tenThousandOnePrime(_ limitNum: Int) -> Int{
+        var countNumTwo = 0
+        var results = 0
+        var indexTwo = 2
+        
+        while countNumTwo <= limitNum {
+            if (isThousandPrime(indexTwo)){
+                results = indexTwo
+                countNumTwo += 1
+            }
+            indexTwo += 1
+        }
+        return results
+    }    
+}
+var taskRun = PrimeNum()
+taskRun.tenThousandOnePrime(10001)
