@@ -1,0 +1,28 @@
+import Darwin
+
+func squaresOfTheSum (numOfTimesOne numForSumOfTheSquares: Int,
+                      numOfTimesTwo numForSquaresOfTheSum: Int) -> Int{
+    
+    var sumOfSquareOne = 0
+    var sumOfSquareTwo = 0
+    var num: Double
+    var numPowOne: Double
+    var numPowTwo: Double
+    
+    for index in 1...numForSumOfTheSquares{
+        numPowOne = Double(index)
+        num = (pow(numPowOne, 2))
+        sumOfSquareOne += Int(num)
+    }
+    for index in 1...numForSquaresOfTheSum{
+        sumOfSquareTwo += index
+        print(sumOfSquareTwo)
+    }
+    numPowTwo = pow(Double(sumOfSquareTwo), 2)
+    print(numPowTwo)
+    
+    return abs(sumOfSquareOne - Int(numPowTwo))
+}
+
+squaresOfTheSum(numOfTimesOne: 100, numOfTimesTwo: 100)
+
