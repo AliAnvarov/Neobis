@@ -1,0 +1,33 @@
+import Darwin
+
+class Pythagorean{
+    func specialOfPythagTriplet() -> Int{
+        var a = 1
+        var b = 2
+        var c = 0
+        var product = 0
+        var num_a = 0
+        var num_b = 0
+        var num_c = 0
+        let sum = 1001
+        while (a <= sum / 3){
+            b = a
+            while (b <= sum / 2) {
+                c = sum - a - b
+                num_a = a * a
+                num_b = b * b
+                num_c = c * c
+                
+                if num_a + num_b == num_c{
+                    product = (a * b * c)
+                    print(product, a, b, c)
+                }
+                b += 1
+            }
+            a += 1
+        }
+        return product
+    }
+}
+var checkPythagorean = Pythagorean()
+checkPythagorean.specialOfPythagTriplet()
