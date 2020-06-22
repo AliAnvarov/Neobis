@@ -8,12 +8,12 @@ func gcd(_ first: Int,_ second: Int) -> Int {
     var second = second
     repeat{
         
-        firstNum = first % second
-        first = second
-        second = firstNum
+      firstNum = first % second
+      first = second
+      second = firstNum
        
     } while firstNum > 0
-
+    
 return first
 }
 
