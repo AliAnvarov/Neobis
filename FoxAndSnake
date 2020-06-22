@@ -1,0 +1,31 @@
+import Darwin
+
+let r : Int = 9
+let c : Int = 9
+var v : Int = 1
+var turnStaff : Bool = false
+
+while (v <= c){
+    if(v % 2 == 1){
+        for _ in 1...c{
+            print ("#", terminator: "")
+        }
+        print ("")
+    }
+    else if(v % 2 == 0 && turnStaff == false){
+        for _ in 1...(c-1){
+            print(".", terminator: "")
+        }
+        print ("#")
+        turnStaff = true
+        
+    }else{
+        print ("#", terminator: "")
+        for _ in 1...(c-1){
+            print(".", terminator: "")
+        }
+        print ("")
+        turnStaff = false
+    }
+    v += 1
+}
