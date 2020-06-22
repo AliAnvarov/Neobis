@@ -1,0 +1,20 @@
+import Darwin
+
+gcd(36,63)
+
+func gcd(_ first: Int,_ second: Int) -> Int {
+    var firstNum : Int
+    var first = first
+    var second = second
+    repeat{
+        
+        firstNum = first % second
+        first = second
+        second = firstNum
+       
+    } while firstNum > 0
+
+return first
+}
+
+
