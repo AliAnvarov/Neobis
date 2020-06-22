@@ -1,0 +1,31 @@
+import Darwin
+
+func isPrime(num: Int) -> Bool {
+
+    var firstPoint = 0
+    var loopNum = 0
+    var index = 2
+    let numOne = num
+
+    loopNum = abs(numOne/2)
+
+    if numOne == 1 || numOne == 0{
+        print("Error")
+    }
+    else{
+        while index <= loopNum{
+            if numOne % index == 0{
+                print("Error")
+                firstPoint += 1
+                break
+            }
+        index += 1
+        }
+        if firstPoint==0{
+            return true
+        }
+    }
+    return false
+}
+isPrime(num: 7)
+
