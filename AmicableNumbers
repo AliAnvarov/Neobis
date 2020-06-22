@@ -1,0 +1,32 @@
+import Darwin
+
+class AmicableNumbers{
+    
+    func divisors(_ num: Int){
+        var arr: [Int] = []
+        var a = 0
+        var b = 1
+        var sum = 0
+        while b < (num - 1){
+            if num % b == 0 {
+                arr.insert(b, at: a)
+                a += 1
+                sum += b
+            }
+            b += 1
+            }
+            if (sum == num){
+                print(num)
+        }
+    }
+    func creat(){
+        var b = 1
+       while b < 1000 {
+            divisors(b)
+            b += 1
+       }
+    }
+    
+}
+var check = AmicableNumbers()
+check.creat()
