@@ -1,0 +1,20 @@
+import Darwin
+
+var numOne = 0
+var numTwo = 1
+var numThree: Int
+var index = 3
+var sumOfValue = 0
+
+while index <= 10 {
+    numThree = numOne + numTwo
+    if numThree % 2 == 0{
+       sumOfValue += numThree
+    }
+    numOne = numTwo
+    numTwo = numThree
+    index += 1
+    print(numThree)
+}
+print(sumOfValue)
+
